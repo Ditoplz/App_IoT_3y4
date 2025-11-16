@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0ffff"
+    tools:context=".admin_main">
+
+    <ImageView
+        android:id="@+id/img_admin_main_personas"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.234"
+        app:srcCompat="@drawable/personas" />
+
+    <ImageView
+        android:id="@+id/img_admin_main_sensores"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.235"
+        app:srcCompat="@drawable/sensores" />
+
+    <ImageView
+        android:id="@+id/img_admin_main_logs"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.648"
+        app:srcCompat="@drawable/logs" />
+
+    <ImageView
+        android:id="@+id/img_admin_main_barrera"
+        android:layout_width="150dp"
+        android:layout_height="150sp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.648"
+        app:srcCompat="@drawable/barrera" />
+
+    <TextView
+        android:id="@+id/txt_admi_main_bienvenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="5dp"
+        android:text="Bienvenido"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_admin_main_usuarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Usuarios"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_admin_main_personas"
+        app:layout_constraintStart_toStartOf="@+id/img_admin_main_personas"
+        app:layout_constraintTop_toBottomOf="@id/img_admin_main_personas" />
+
+    <TextView
+        android:id="@+id/txt_admin_main_sensores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Sensores"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_admin_main_sensores"
+        app:layout_constraintStart_toStartOf="@+id/img_admin_main_sensores"
+        app:layout_constraintTop_toBottomOf="@+id/img_admin_main_sensores" />
+
+    <TextView
+        android:id="@+id/txt_admin_main_logs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Logs"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_admin_main_logs"
+        app:layout_constraintStart_toStartOf="@+id/img_admin_main_logs"
+        app:layout_constraintTop_toBottomOf="@+id/img_admin_main_logs" />
+
+    <TextView
+        android:id="@+id/txt_admin_main_barrera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Abrir Barrera"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_admin_main_barrera"
+        app:layout_constraintStart_toStartOf="@+id/img_admin_main_barrera"
+        app:layout_constraintTop_toBottomOf="@+id/img_admin_main_barrera" />
+
+    <ImageView
+        android:id="@+id/img_admin_main_volver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_admi_main_bienvenido"
+        app:layout_constraintEnd_toStartOf="@+id/txt_admi_main_bienvenido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_admi_main_bienvenido"
+        app:srcCompat="@drawable/volver" />
+</androidx.constraintlayout.widget.ConstraintLayout>

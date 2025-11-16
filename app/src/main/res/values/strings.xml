@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IoT_Ev3</string>
+
+    <string-array name="opciones_valido">
+        <item>Seleccione Estado</item>
+        <item>Válido</item>
+        <item>No Válido</item>
+    </string-array>
+
+</resources>

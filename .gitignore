@@ -1,0 +1,16 @@
+# Folders treated as cache
+.gradle
+build/
+
+# Android Studio generated files
+*.iml
+.idea/
+.cxx/
+local.properties
+
+# Misc
+.DS_Store
+
+# Keystore files
+*.jks
+*.keystore
