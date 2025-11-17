@@ -9,108 +9,44 @@
     tools:context=".admin_agregar_sensor">
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btn_admin_agregar_sensor_registar_sensor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
-        android:text="Button"
+        android:backgroundTint="#FF9800"
+        android:text="Registrar sensor"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/registrarNombres10"
-        app:layout_constraintStart_toStartOf="@+id/registrarNombres10"
-        app:layout_constraintTop_toBottomOf="@+id/registrarNombres9" />
+        app:layout_constraintEnd_toEndOf="@+id/spinner_admin_agregar_sensor_departamento"
+        app:layout_constraintStart_toStartOf="@+id/spinner_admin_agregar_sensor_departamento"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_admin_agregar_sensor_departamento" />
 
     <EditText
-        android:id="@+id/registrarNombres10"
-        android:layout_width="wrap_content"
+        android:id="@+id/input_admin_agregar_sensor_numero_acesso"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:height="50dp"
         android:ems="10"
-        android:hint="NOMBRES"
+        android:hint="Número de acceso del sensor"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.67" />
-
-    <EditText
-        android:id="@+id/registrarNombres4"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:height="50dp"
-        android:ems="10"
-        android:hint="NOMBRES"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.562" />
-
-    <EditText
-        android:id="@+id/registrarNombres3"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:height="50dp"
-        android:ems="10"
-        android:hint="NOMBRES"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448" />
-
-    <EditText
-        android:id="@+id/registrarNombres2"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:height="50dp"
-        android:ems="10"
-        android:hint="NOMBRES"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.327" />
-
-    <EditText
-        android:id="@+id/registrarNombres"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:height="50dp"
-        android:ems="10"
-        android:hint="NOMBRES"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.208" />
+        app:layout_constraintVertical_bias="0.242" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/img_admin_agregar_sensor_volver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/volver"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_admin_agregar_sensor_registrar_sensor"
+        app:layout_constraintEnd_toStartOf="@+id/txt_admin_agregar_sensor_registrar_sensor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
+        app:layout_constraintTop_toTopOf="@+id/txt_admin_agregar_sensor_registrar_sensor" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txt_admin_agregar_sensor_registrar_sensor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -120,4 +56,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_admin_agregar_sensor_tipo"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/input_admin_agregar_sensor_numero_acesso"
+        app:layout_constraintStart_toStartOf="@+id/input_admin_agregar_sensor_numero_acesso"
+        app:layout_constraintTop_toBottomOf="@+id/input_admin_agregar_sensor_numero_acesso" />
+
+    <Spinner
+        android:id="@+id/spinner_admin_agregar_sensor_estado"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_admin_agregar_sensor_tipo"
+        app:layout_constraintStart_toStartOf="@+id/spinner_admin_agregar_sensor_tipo"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_admin_agregar_sensor_tipo" />
+
+    <Spinner
+        android:id="@+id/spinner_admin_agregar_sensor_usuario"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_admin_agregar_sensor_estado"
+        app:layout_constraintStart_toStartOf="@+id/spinner_admin_agregar_sensor_estado"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_admin_agregar_sensor_estado" />
+
+    <Spinner
+        android:id="@+id/spinner_admin_agregar_sensor_departamento"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_admin_agregar_sensor_usuario"
+        app:layout_constraintStart_toStartOf="@+id/spinner_admin_agregar_sensor_usuario"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_admin_agregar_sensor_usuario" />
 </androidx.constraintlayout.widget.ConstraintLayout>

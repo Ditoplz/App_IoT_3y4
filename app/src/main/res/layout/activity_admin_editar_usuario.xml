@@ -9,71 +9,65 @@
     tools:context=".admin_editar_ususario">
 
     <EditText
-        android:id="@+id/registrarNombres14"
-        android:layout_width="wrap_content"
+        android:id="@+id/input_admin_editar_usuario_rut"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
         android:height="50dp"
         android:ems="10"
-        android:hint="NOMBRES"
+        android:hint="RUT Ej: 12345678-9"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/input_admin_editar_usuario_apellido_materno"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547" />
+        app:layout_constraintStart_toStartOf="@+id/input_admin_editar_usuario_apellido_materno"
+        app:layout_constraintTop_toBottomOf="@+id/input_admin_editar_usuario_apellido_materno" />
 
     <EditText
-        android:id="@+id/registrarNombres13"
-        android:layout_width="wrap_content"
+        android:id="@+id/input_admin_editar_usuario_apellido_materno"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
         android:height="50dp"
         android:ems="10"
-        android:hint="NOMBRES"
+        android:hint="Apellido Materno"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/input_admin_editar_usuario_apellido_paterno"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintStart_toStartOf="@+id/input_admin_editar_usuario_apellido_paterno"
+        app:layout_constraintTop_toBottomOf="@+id/input_admin_editar_usuario_apellido_paterno" />
 
     <EditText
-        android:id="@+id/registrarNombres12"
-        android:layout_width="wrap_content"
+        android:id="@+id/input_admin_editar_usuario_apellido_paterno"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
         android:height="50dp"
         android:ems="10"
-        android:hint="NOMBRES"
+        android:hint="Apellido Paterno"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/input_admin_editar_usuario_nombres"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315" />
+        app:layout_constraintStart_toStartOf="@+id/input_admin_editar_usuario_nombres"
+        app:layout_constraintTop_toBottomOf="@+id/input_admin_editar_usuario_nombres" />
 
     <EditText
-        android:id="@+id/registrarNombres11"
-        android:layout_width="wrap_content"
+        android:id="@+id/input_admin_editar_usuario_nombres"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:height="50dp"
         android:ems="10"
-        android:hint="NOMBRES"
+        android:hint="Nombres"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.208" />
+        app:layout_constraintVertical_bias="0.145" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txt_admin_editar_usuario_editar_usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -85,36 +79,70 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/img_admin_editar_usuario_volver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/volver"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_admin_editar_usuario_editar_usuario"
+        app:layout_constraintEnd_toStartOf="@+id/txt_admin_editar_usuario_editar_usuario"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView3" />
+        app:layout_constraintTop_toTopOf="@+id/txt_admin_editar_usuario_editar_usuario" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="475dp" />
+        android:id="@+id/btn_admin_editar_usuario_eliminar"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#EF1606"
+        android:text="Eliminar usuario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="544dp" />
+        android:id="@+id/btn_admin_editar_usuario_guardar_cambios"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Guardar Cambios"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="617dp" />
+    <Spinner
+        android:id="@+id/spinner_admin_editar_usuario_estado"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/input_admin_editar_usuario_repetir_clave"
+        app:layout_constraintStart_toStartOf="@+id/input_admin_editar_usuario_repetir_clave"
+        app:layout_constraintTop_toBottomOf="@+id/input_admin_editar_usuario_repetir_clave" />
+
+    <EditText
+        android:id="@+id/input_admin_editar_usuario_clave"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Ingrese contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/input_admin_editar_usuario_rut"
+        app:layout_constraintStart_toStartOf="@+id/input_admin_editar_usuario_rut"
+        app:layout_constraintTop_toBottomOf="@+id/input_admin_editar_usuario_rut" />
+
+    <EditText
+        android:id="@+id/input_admin_editar_usuario_repetir_clave"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Repita contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/input_admin_editar_usuario_clave"
+        app:layout_constraintStart_toStartOf="@+id/input_admin_editar_usuario_clave"
+        app:layout_constraintTop_toBottomOf="@+id/input_admin_editar_usuario_clave" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

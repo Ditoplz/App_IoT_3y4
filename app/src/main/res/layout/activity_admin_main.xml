@@ -53,7 +53,7 @@
         app:srcCompat="@drawable/barrera" />
 
     <TextView
-        android:id="@+id/txt_admi_main_bienvenido"
+        android:id="@+id/txt_admin_main_bienvenido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -117,9 +117,9 @@
         android:id="@+id/img_admin_main_volver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_admi_main_bienvenido"
-        app:layout_constraintEnd_toStartOf="@+id/txt_admi_main_bienvenido"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_admin_main_bienvenido"
+        app:layout_constraintEnd_toStartOf="@+id/txt_admin_main_bienvenido"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txt_admi_main_bienvenido"
+        app:layout_constraintTop_toTopOf="@+id/txt_admin_main_bienvenido"
         app:srcCompat="@drawable/volver" />
 </androidx.constraintlayout.widget.ConstraintLayout>

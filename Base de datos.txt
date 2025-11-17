@@ -1,0 +1,37 @@
+CREATE TABLE usuarios (
+  id_usuario INT PRIMARY KEY,
+  nombres VARCHAR(100),
+  apellido_p VARCHAR(100),
+  apellido_m VARCHAR(100),
+  rut VARCHAR(15) UNIQUE,
+  clave VARCHAR(200),
+  estado VARCHAR(10)
+);
+
+CREATE TABLE departamentos (
+  id_departamento INT PRIMARY KEY,
+  torre VARCHAR(10),
+  numero VARCHAR(10),
+  administrador INT,
+  FOREIGN KEY (administrador) REFERENCES usuarios(id_usuario)
+);
+
+CREATE TABLE sensores (
+  id_sensor INT PRIMARY KEY,
+  numero_acceso VARCHAR(20),
+  tipo VARCHAR(20),
+  estado VARCHAR(20),
+  id_departamento INT,
+  id_usuario INT,
+  FOREIGN KEY (id_departamento) REFERENCES departamentos(id_departamento),
+  FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
+);
+
+CREATE TABLE eventos (
+  id_evento INT PRIMARY KEY,
+  id_sensor INT,
+  tipo VARCHAR(25),
+  resultado VARCHAR(25),
+  fecha TIMESTAMP,
+  FOREIGN KEY (id_sensor) REFERENCES sensores(id_sensor)
+);

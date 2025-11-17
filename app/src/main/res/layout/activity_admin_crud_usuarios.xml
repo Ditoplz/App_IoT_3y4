@@ -9,32 +9,33 @@
     tools:context=".admin_crud_usuarios">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvUsuarios"
+        android:id="@+id/view_admin_crud_personas_lista"
         android:layout_width="330dp"
         android:layout_height="404dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/svSearchUsuarios"
-        app:layout_constraintVertical_bias="0.084"
+        app:layout_constraintTop_toBottomOf="@+id/input_admin_crud_sensores_buscar"
+        app:layout_constraintVertical_bias="0.087"
         tools:listitem="@layout/item_usuario" />
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/svSearchUsuarios"
+        android:id="@+id/input_admin_crud_sensores_buscar"
         android:layout_width="341dp"
         android:layout_height="53dp"
         android:layout_margin="16dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
         app:iconifiedByDefault="false"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/btn_admin_crud_usuarios_agregar_usuario"
+        app:layout_constraintStart_toStartOf="@+id/btn_admin_crud_usuarios_agregar_usuario"
+        app:layout_constraintTop_toBottomOf="@+id/btn_admin_crud_usuarios_agregar_usuario"
         app:queryHint="Buscar usuario por nombre..." />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txt_admin_crud_usuarios_personas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -45,24 +46,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/img_admin_crud_usuarios_volver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_admin_crud_usuarios_personas"
+        app:layout_constraintEnd_toStartOf="@+id/txt_admin_crud_usuarios_personas"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/txt_admin_crud_usuarios_personas"
         app:srcCompat="@drawable/volver" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_admin_crud_usuarios_agregar_usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:backgroundTint="#FF9800"
         android:text="Agregar Usuario"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@+id/txt_admin_crud_usuarios_personas"
+        app:layout_constraintStart_toStartOf="@+id/txt_admin_crud_usuarios_personas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_admin_crud_usuarios_personas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
