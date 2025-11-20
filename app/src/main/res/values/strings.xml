@@ -7,4 +7,10 @@
         <item>No Válido</item>
     </string-array>
 
+    <string-array name="opciones_resultado">
+        <item>Todos</item>
+        <item>Exito</item>
+        <item>Fallo</item>
+    </string-array>
+
 </resources>

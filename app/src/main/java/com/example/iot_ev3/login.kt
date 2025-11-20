@@ -72,14 +72,14 @@ class login : AppCompatActivity() {
                         when (tipo) {
                             "admin" -> {
                                 val intent = Intent(this, admin_main::class.java)
-                                intent.putExtra("USER_ID", id)
-                                intent.putExtra("USER_TYPE", tipo)
+                                intent.putExtra("id", id)
+                                intent.putExtra("tipo", tipo)
                                 startActivity(intent)
                             }
                             "operador" -> {
                                 val intent = Intent(this, operador_main::class.java)
-                                intent.putExtra("USER_ID", id)
-                                intent.putExtra("USER_TYPE", tipo)
+                                intent.putExtra("id", id)
+                                intent.putExtra("tipo", tipo)
                                 startActivity(intent)
                             }
                             else -> {

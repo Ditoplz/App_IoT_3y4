@@ -8,19 +8,6 @@
     android:background="#e0ffff"
     tools:context=".logs">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/input_logs_nombre"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="15dp"
-        app:iconifiedByDefault="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_logs_logs"
-        app:queryHint="Buscar registro por nombre..." />
-
     <TextView
         android:id="@+id/txt_logs_logs"
         android:layout_width="wrap_content"
@@ -44,69 +31,49 @@
 
     <EditText
         android:id="@+id/input_logs_fecha"
-        android:layout_width="225dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:focusable="false"
         android:hint="Seleccionar Fecha"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_clear_date"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_logs_logs" />
+
+    <ImageView
+        android:id="@+id/btn_clear_date"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:visibility="gone"
+        android:padding="8dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input_logs_fecha"
+        app:layout_constraintBottom_toBottomOf="@+id/input_logs_fecha"/>
 
     <Spinner
         android:id="@+id/spinner_logs_respuesta"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="32dp"
-        android:entries="@array/opciones_valido"
-        app:layout_constraintBottom_toBottomOf="@+id/input_logs_fecha"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/input_logs_fecha"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn_logs_buscar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:backgroundTint="#FF9800"
-        android:text="Buscar"
-        app:layout_constraintEnd_toEndOf="@+id/input_logs_nombre"
-        app:layout_constraintStart_toStartOf="@+id/input_logs_nombre"
-        app:layout_constraintTop_toBottomOf="@+id/input_logs_nombre" />
-
-    <Button
-        android:id="@+id/btn_logs_pagina_anterior"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#FF9800"
-        android:text="Anterior"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_logs_pagina_siguiente"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn_logs_pagina_siguiente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FF9800"
-        android:text="Siguiente"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_logs_pagina_anterior"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_logs_pagina_anterior" />
+        android:layout_marginTop="16dp"
+        android:entries="@array/opciones_resultado"
+        app:layout_constraintEnd_toEndOf="@+id/btn_clear_date"
+        app:layout_constraintStart_toStartOf="@+id/input_logs_fecha"
+        app:layout_constraintTop_toBottomOf="@+id/input_logs_fecha" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/view_logs_lista"
-        android:layout_width="380dp"
-        android:layout_height="317dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
+        app:layout_constraintEnd_toEndOf="@+id/spinner_logs_respuesta"
+        app:layout_constraintStart_toStartOf="@+id/spinner_logs_respuesta"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_logs_respuesta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
