@@ -4,11 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
@@ -37,13 +37,22 @@ class login : AppCompatActivity() {
         btn = findViewById(R.id.btn_login_ingresar)
         datos = Volley.newRequestQueue(this)
 
-        btn.setOnClickListener()
-        {
-            consultarDatos(usu.getText().toString(),clave.getText().toString());
+        btn.setOnClickListener {
+            val userText = usu.text.toString()
+            val passText = clave.text.toString()
+            if (userText.isNotEmpty() && passText.isNotEmpty()) {
+                consultarDatos(userText, passText)
+            } else {
+                SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                    .setTitleText("Error de Validación")
+                    .setContentText("Por favor, complete todos los campos.")
+                    .setConfirmText("Aceptar")
+                    .show()
+            }
         }
     }
 
-    fun consultarDatos(usu: String, pass: String) {
+    private fun consultarDatos(usu: String, pass: String) {
         val url = "http://34.206.51.125/apiconsultausu.php?usu=$usu&pass=$pass"
         val request = JsonObjectRequest(
             Request.Method.GET, url, null,
@@ -51,26 +60,55 @@ class login : AppCompatActivity() {
                 try {
                     val estado = response.getString("estado")
                     if (estado == "0") {
-                        Toast.makeText(
-                            this@login, "Usuario no disponible para acceder a la plataforma",
-                            Toast.LENGTH_LONG
-                        ).show()
+                        SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                            .setTitleText("Acceso Denegado")
+                            .setContentText("Asegúrse que los datos ingresados sean correctos y de tener permisos para acceder.")
+                            .setConfirmText("Aceptar")
+                            .show()
                     } else {
-                        val ventana = Intent(
-                            this@login,
-                            admin_main::class.java
-                        )
-                        startActivity(ventana)
+                        val id = response.getString("id")
+                        val tipo = response.getString("tipo")
+
+                        when (tipo) {
+                            "admin" -> {
+                                val intent = Intent(this, admin_main::class.java)
+                                intent.putExtra("USER_ID", id)
+                                intent.putExtra("USER_TYPE", tipo)
+                                startActivity(intent)
+                            }
+                            "operador" -> {
+                                val intent = Intent(this, operador_main::class.java)
+                                intent.putExtra("USER_ID", id)
+                                intent.putExtra("USER_TYPE", tipo)
+                                startActivity(intent)
+                            }
+                            else -> {
+                                SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                                    .setTitleText("Error de Rol")
+                                    .setContentText("El rol de usuario no es reconocido.")
+                                    .setConfirmText("Aceptar")
+                                    .show()
+                            }
+                        }
                     }
                 } catch (e: JSONException) {
                     e.printStackTrace()
+                    SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                        .setTitleText("Error de Respuesta")
+                        .setContentText("El formato de la respuesta del servidor es incorrecto.")
+                        .setConfirmText("Aceptar")
+                        .show()
                 }
             },
             { error ->
                 error.printStackTrace()
+                SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                    .setTitleText("Error de Red")
+                    .setContentText("No se pudo conectar con el servidor. Verifique su conexión.")
+                    .setConfirmText("Aceptar")
+                    .show()
             }
         )
         datos.add(request)
     }
-
 }
