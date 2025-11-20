@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#e0ffff"
-    tools:context=".admin_editar_ususario">
+    tools:context=".admin_editar_usuario">
 
     <EditText
         android:id="@+id/input_admin_editar_usuario_rut"
@@ -106,7 +106,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:backgroundTint="#4CAF50"
-        android:text="Guardar Cambios"
+        android:text="Guardar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -23,7 +23,7 @@
             android:name=".admin_agregar_usuario"
             android:exported="false" />
         <activity
-            android:name=".admin_editar_ususario"
+            android:name=".admin_editar_usuario"
             android:exported="false" />
         <activity
             android:name=".operador_main"

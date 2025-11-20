@@ -10,12 +10,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/view_admin_crud_personas_lista"
-        android:layout_width="328dp"
-        android:layout_height="356dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/input_admin_crud_sensores_buscar_departamento"
-        app:layout_constraintStart_toStartOf="@+id/input_admin_crud_sensores_buscar_departamento"
-        app:layout_constraintTop_toBottomOf="@+id/input_admin_crud_sensores_buscar_departamento"
+        android:layout_width="320dp"
+        android:layout_height="445dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/input_admin_crud_sensores_buscar_usuario"
+        app:layout_constraintStart_toStartOf="@+id/input_admin_crud_sensores_buscar_usuario"
+        app:layout_constraintTop_toBottomOf="@+id/input_admin_crud_sensores_buscar_usuario"
         tools:listitem="@layout/item_usuario" />
 
     <androidx.appcompat.widget.SearchView
@@ -29,7 +29,7 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@+id/btn_admin_crud_sensores_agregar_sensor"
         app:layout_constraintTop_toBottomOf="@+id/btn_admin_crud_sensores_agregar_sensor"
-        app:queryHint="Buscar por usuario..." />
+        app:queryHint="Buscar por usuario/departamento..." />
 
     <Button
         android:id="@+id/btn_admin_crud_sensores_agregar_sensor"
@@ -63,14 +63,4 @@
         app:layout_constraintTop_toTopOf="@+id/txt_admin_crud_sensores_sensores"
         app:srcCompat="@drawable/volver" />
 
-    <SearchView
-        android:id="@+id/input_admin_crud_sensores_buscar_departamento"
-        android:layout_width="340dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="15dp"
-        android:iconifiedByDefault="false"
-        android:queryHint="Buscar por departamento..."
-        app:layout_constraintEnd_toEndOf="@+id/input_admin_crud_sensores_buscar_usuario"
-        app:layout_constraintStart_toStartOf="@+id/input_admin_crud_sensores_buscar_usuario"
-        app:layout_constraintTop_toBottomOf="@+id/input_admin_crud_sensores_buscar_usuario" />
 </androidx.constraintlayout.widget.ConstraintLayout>

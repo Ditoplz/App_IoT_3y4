@@ -13,4 +13,10 @@
         <item>Fallo</item>
     </string-array>
 
+    <string-array name="opciones_estado_usuario">
+        <item>Seleccione Estado</item>
+        <item>Activo</item>
+        <item>Inactivo</item>
+    </string-array>
+
 </resources>

@@ -88,7 +88,7 @@ class logs : AppCompatActivity() {
     private val runnable = object : Runnable {
         override fun run() {
             consultarLogs()
-            handler.postDelayed(this, 10000) // Repetir cada 10 segundos
+            handler.postDelayed(this, 10000)
         }
     }
 
