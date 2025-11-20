@@ -19,4 +19,10 @@
         <item>Inactivo</item>
     </string-array>
 
+    <string-array name="opciones_tipo_sensor">
+        <item>Seleccione Tipo</item>
+        <item>Tarjeta</item>
+        <item>Llavero</item>
+    </string-array>
+
 </resources>

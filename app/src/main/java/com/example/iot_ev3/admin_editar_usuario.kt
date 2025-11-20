@@ -2,6 +2,7 @@ package com.example.iot_ev3
 
 import android.app.Activity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -74,6 +75,11 @@ class admin_editar_usuario : AppCompatActivity() {
                 val adapter = spinner.adapter as ArrayAdapter<String>
                 val position = if (estado == "1") adapter.getPosition("Activo") else adapter.getPosition("Inactivo")
                 spinner.setSelection(position)
+
+                val userType = response.getString("tipo")
+                if (userType.equals("admin", ignoreCase = true)) {
+                    findViewById<Button>(R.id.btn_admin_editar_usuario_eliminar).visibility = View.GONE
+                }
             },
             { error ->
                 mostrarError("No se pudieron cargar los datos del usuario. Error: ${error.message}")
