@@ -63,7 +63,7 @@ class admin_crud_usuarios : AppCompatActivity() {
     private var usuariosList = mutableListOf<Usuario>()
     private lateinit var adminId: String
 
-    private val editUserLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+    private val activityLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             consultarUsuarios("")
         }
@@ -86,7 +86,7 @@ class admin_crud_usuarios : AppCompatActivity() {
         adapter = UsuariosAdapter(usuariosList) { usuario ->
             val intent = Intent(this, admin_editar_usuario::class.java)
             intent.putExtra("USER_ID_TO_EDIT", usuario.id.toString())
-            editUserLauncher.launch(intent)
+            activityLauncher.launch(intent)
         }
         recyclerView.adapter = adapter
 
@@ -97,7 +97,7 @@ class admin_crud_usuarios : AppCompatActivity() {
         btnAgregar.setOnClickListener {
             val intent = Intent(this, admin_agregar_usuario::class.java)
             intent.putExtra("id", adminId)
-            startActivity(intent)
+            activityLauncher.launch(intent)
         }
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {

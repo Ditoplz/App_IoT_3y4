@@ -1,5 +1,6 @@
 package com.example.iot_ev3
 
+import android.app.Activity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -70,11 +71,11 @@ class admin_agregar_usuario : AppCompatActivity() {
             return false
         }
         if (!apellidoP.matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$".toRegex()) || apellidoP.length > 45) {
-            mostrarError("El campo 'Apellido Paterno' solo debe contener letras y un máximo de 15 caracteres.")
+            mostrarError("El campo 'Apellido Paterno' solo debe contener letras y un máximo de 45 caracteres.")
             return false
         }
         if (!apellidoM.matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$".toRegex()) || apellidoM.length > 45) {
-            mostrarError("El campo 'Apellido Materno' solo debe contener letras y un máximo de 15 caracteres.")
+            mostrarError("El campo 'Apellido Materno' solo debe contener letras y un máximo de 45 caracteres.")
             return false
         }
 
@@ -98,7 +99,6 @@ class admin_agregar_usuario : AppCompatActivity() {
 
     private fun registrarUsuario() {
         val url = "http://34.206.51.125/api_agregar_usuario.php"
-
         val nombres = findViewById<EditText>(R.id.input_admin_agregar_usuario_nombres).text.toString().trim()
         val apellidoP = findViewById<EditText>(R.id.input_admin_agregar_usuario_apellido_paterno).text.toString().trim()
         val apellidoM = findViewById<EditText>(R.id.input_admin_agregar_usuario_apellido_materno).text.toString().trim()
@@ -127,6 +127,7 @@ class admin_agregar_usuario : AppCompatActivity() {
                             .setContentText(mensaje)
                             .setConfirmClickListener { sDialog ->
                                 sDialog.dismissWithAnimation()
+                                setResult(Activity.RESULT_OK)
                                 finish()
                             }
                             .show()
