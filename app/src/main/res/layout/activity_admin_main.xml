@@ -77,7 +77,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/img_admin_main_personas"
         app:layout_constraintStart_toStartOf="@+id/img_admin_main_personas"
-        app:layout_constraintTop_toBottomOf="@id/img_admin_main_personas" />
+        app:layout_constraintTop_toBottomOf="@+id/img_admin_main_personas" />
 
     <TextView
         android:id="@+id/txt_admin_main_sensores"
@@ -90,7 +90,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/img_admin_main_sensores"
         app:layout_constraintStart_toStartOf="@+id/img_admin_main_sensores"
-        app:layout_constraintTop_toBottomOf="@+id/img_admin_main_sensores" />
+        app:layout_constraintTop_toBottomOf="@id/img_admin_main_sensores" />
 
     <TextView
         android:id="@+id/txt_admin_main_logs"
@@ -127,4 +127,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_admin_main_bienvenido"
         app:srcCompat="@drawable/volver" />
+
+    <TextView
+        android:id="@+id/txt_admin_main_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Cerrando en 10..." />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
